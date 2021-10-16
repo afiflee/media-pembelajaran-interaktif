@@ -61,7 +61,7 @@ export default {
       theme_color: '#008080'
     },
     workbox: {
-      dev: true // or use a global variable to track the current NODE_ENV, etc to determine dev mode
+      dev: process.env.NODE_ENV !== 'production'
     }
   },
 
