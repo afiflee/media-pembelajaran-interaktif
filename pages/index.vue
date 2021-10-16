@@ -1,77 +1,68 @@
 <template>
-  <v-row justify="center" align="center">
-    <v-col cols="12" sm="8" md="6">
-      <v-card class="logo py-4 d-flex justify-center">
-        <NuxtLogo />
-        <VuetifyLogo />
-      </v-card>
-      <v-card>
-        <v-card-title class="headline">
-          Welcome to the Vuetify + Nuxt.js template
-        </v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>
-            For more information on Vuetify, check out the <a
-              href="https://vuetifyjs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              documentation
-            </a>.
+  <v-card
+    class="mx-auto"
+    height="500"
+  >
+    <v-card-text>
+      <div>Word of the Day</div>
+      <p class="text-h4 text--primary">
+        el·ee·mos·y·nar·y
+      </p>
+      <p>adjective</p>
+      <div class="text--primary">
+        relating to or dependent on charity; charitable.<br>
+        "an eleemosynary educational institution."
+      </div>
+    </v-card-text>
+    <v-card-actions>
+      <v-btn
+        text
+        color="teal accent-4"
+        @click="reveal = true"
+      >
+        Learn More
+      </v-btn>
+    </v-card-actions>
+
+    <v-expand-transition>
+      <v-card
+        v-if="reveal"
+        class="transition-fast-in-fast-out v-card--reveal"
+        style="height: 100%;"
+      >
+        <v-card-text class="pb-0">
+          <p class="text-h4 text--primary">
+            Origin
           </p>
-          <p>
-            If you have questions, please join the official <a
-              href="https://chat.vuetifyjs.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="chat"
-            >
-              discord
-            </a>.
-          </p>
-          <p>
-            Find a bug? Report it on the github <a
-              href="https://github.com/vuetifyjs/vuetify/issues"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="contribute"
-            >
-              issue board
-            </a>.
-          </p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt Documentation
-          </a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Nuxt GitHub
-          </a>
+          <p>late 16th century (as a noun denoting a place where alms were distributed): from medieval Latin eleemosynarius, from late Latin eleemosyna ‘alms’, from Greek eleēmosunē ‘compassion’ </p>
         </v-card-text>
-        <v-card-actions>
-          <v-spacer />
+        <v-card-actions class="pt-0">
           <v-btn
-            color="primary"
-            nuxt
-            to="/inspire"
+            text
+            color="teal accent-4"
+            @click="reveal = false"
           >
-            Continue
+            Close
           </v-btn>
         </v-card-actions>
       </v-card>
-    </v-col>
-  </v-row>
+    </v-expand-transition>
+  </v-card>
 </template>
+
+<script>
+  export default {
+    data: () => ({
+      reveal: false,
+    }),
+  }
+</script>
+
+<style>
+.v-card--reveal {
+  bottom: 0;
+  opacity: 1 !important;
+  position: absolute;
+  width: 100%;
+}
+</style>

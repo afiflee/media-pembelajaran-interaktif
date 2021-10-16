@@ -29,12 +29,6 @@
       fixed
       app
     >
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
       <v-toolbar-title v-text="title" />
     </v-app-bar>
     <v-main>
@@ -60,20 +54,25 @@ export default {
       fixed: false,
       items: [
         {
-          icon: 'mdi-apps',
-          title: 'Welcome',
+          icon: 'mdi-home',
+          title: 'Home',
           to: '/'
         },
         {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
+          icon: 'mdi-book',
+          title: 'Book',
+          to: '/book'
+        },
+        {
+          icon: 'mdi-apps',
+          title: 'Quiz',
           to: '/inspire'
-        }
+        },
       ],
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Vuetify.js'
+      title: 'Media Pembelajaran Interaktif'
     }
   }
 }
