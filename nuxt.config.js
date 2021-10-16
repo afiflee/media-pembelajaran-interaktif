@@ -31,6 +31,7 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/vuetify
     '@nuxtjs/vuetify',
+    '@nuxtjs/pwa',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -48,8 +49,19 @@ export default {
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
+    meta:{
+      title: 'Media Pembelajaran Interaktif',
+      author: 'Fanny Sarawanti',
+    },
     manifest: {
-      lang: 'en'
+      name: 'Media Pembelajaran Interaktif',
+      short_name: 'skripsi',
+      lang: 'en',
+      display: 'standalone',
+      theme_color: '#008080'
+    },
+    workbox: {
+      dev: true // or use a global variable to track the current NODE_ENV, etc to determine dev mode
     }
   },
 
