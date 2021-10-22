@@ -1,19 +1,3 @@
 <template>
-  <v-row>
-    <v-col class="text-center">
-      <img
-        src="/v.png"
-        alt="Vuetify.js"
-        class="mb-5"
-      >
-      <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
-        <footer>
-          <small>
-            <em>&mdash;John Johnson</em>
-          </small>
-        </footer>
-      </blockquote>
-    </v-col>
-  </v-row>
+  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc5d0JCHOU15IxlwZnLMXwOe6DUqwyag565_o1-QNoHdThH_Q/viewform?embedded=true" width="100%" height="662" frameborder="0" marginheight="0" marginwidth="0">Memuat…</iframe>
 </template>
