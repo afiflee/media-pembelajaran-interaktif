@@ -145,7 +145,7 @@
         return this.keys.filter(key => key !== 'Name')
       },
     },
-    methods: {
+    /*methods: {
       nextPage () {
         if (this.page + 1 <= this.numberOfPages) this.page += 1
       },
@@ -155,6 +155,6 @@
       updateItemsPerPage (number) {
         this.itemsPerPage = number
       },
-    },
+    },*/
   }
 </script>
